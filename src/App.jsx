@@ -12,7 +12,8 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("/data.json")
+      // Use relative path that respects vite base config
+      fetch("./data.json")
         .then((response) => response.json())
         .then((data) => {
           setFoods(data);
