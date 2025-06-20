@@ -1,9 +1,9 @@
 {
-  "name": "your-app-name",
+  "name": "desert-food-cart",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yourusername.github.io/your-repo-name",
+  "homepage": "https://AbdullarhyTech360.github.io/product-list-with-cart-main",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
