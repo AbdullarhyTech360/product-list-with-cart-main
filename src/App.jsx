@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Food from "./Food";
-import cartIllustration from "./assets/images/illustration-empty-cart.svg";
+const cartIllustration = "./images/illustration-empty-cart.svg";
 import FoodSkeleton from "./FoodSkeleton";
 
 function App() {
