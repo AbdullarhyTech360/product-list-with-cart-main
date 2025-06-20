@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import cartImage from "./assets/images/icon-add-to-cart.svg";
 import FoodSkeleton from "./FoodSkeleton";
 
 export default function Food({ 
@@ -60,7 +59,7 @@ export default function Food({
            hover:cursor-pointer hover:text-my-red hover:border-my-red`
           }
         >
-          <img src={cartImage} alt="cart-image" className="inline-block w-5 h-5" />
+          <img src="/images/icon-add-to-cart.svg" alt="Add to cart" className="inline-block w-5 h-5" />
           Add to Cart
         </button>
         
