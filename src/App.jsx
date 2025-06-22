@@ -11,14 +11,14 @@ function App() {
   const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      // Use relative path that respects vite base config
-      fetch("./data.json")
-        .then((response) => response.json())
-        .then((data) => {
-          setFoods(data);
-        });
-    }, 3000);
+    fetch("./data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setFoods(data);
+      });
+    // setTimeout(() => {
+    //   // Use relative path that respects vite base config
+    // }, 3000);
   }, []);
 
 
@@ -77,7 +77,7 @@ function App() {
               )}
               {cartNumber > 0 && (
                 <div className="">
-                  <h1 className="text-my-red font-extrabold text-xl pointer-events-none">
+                  <h1 className="text-my-red font-bold text-2xl pointer-events-none tracking-wider font-sans">
                     Your Cart (<span>{cartNumber}</span>)
                   </h1>
                   <div>
@@ -87,7 +87,7 @@ function App() {
                         key={index}
                       >
                         <div key={index} className="">
-                          <p className="font-extrabold">{food?.name}</p>
+                          <p className="font-semibold">{food?.name}</p>
                           <p className="text-sm font-bold text-my-red">
                             {food.quantity}x{" "}
                             <span className="text-my-rose-300 font-semibold mx-4">
@@ -133,7 +133,7 @@ function App() {
                       <p className="text-sm font-bold text-my-rose-500">
                         Order total
                       </p>
-                      <p className="text-lg font-extrabold text-my-rose-900">
+                      <p className="text-lg font-bold text-my-rose-900">
                         {"$" +
                           selectedFood
                             .reduce(
@@ -200,7 +200,7 @@ function App() {
                           fill="#1EA575"
                         />
                       </svg>
-                      <h1 className="text-5xl font-extrabold my-2.5">Order Confirmed</h1>
+                      <h1 className="text-5xl w-1/2 font-bold my-2.5">Order Confirmed</h1>
                       <p className="font-semibold text-my-rose-300 mb-8">We hope you enjoy your food!</p>
                       <div className="bg-my-rose-50 rounded-xl p-2">
                         <div className="mt-7">

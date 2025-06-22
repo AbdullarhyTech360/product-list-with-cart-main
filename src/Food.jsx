@@ -56,7 +56,7 @@ export default function Food({
           className={
             data.quantity > 0
               ? "hidden"
-              : `add-btn w-[60%] md:w-[70%] lg:w-[60%] absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-my-rose-50 flex
+              : `add-btn w-[170px] md:w-[70%] lg:w-[60%] absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-my-rose-50 flex
            items-center justify-center gap-2 border-my-rose-500 border-[1px] rounded-full py-3 px-4 text-sm font-bold 
            hover:cursor-pointer hover:text-my-red hover:border-my-red`
           }
@@ -67,7 +67,7 @@ export default function Food({
         
         {data.quantity > 0 && (
           <div
-            className="absolute flex w-[60%] md:w-[70%] lg:w-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-my-red
+            className="absolute flex w-170 md:w-[70%] lg:w-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-my-red
            items-center justify-center gap-12 border-my-red border-1 rounded-full py-3 px-4 text-sm font-bold 
            hover:cursor-pointer hover:border-my-red"
           >
@@ -125,7 +125,7 @@ export default function Food({
         <div className="mt-8 flex flex-col details-div lg:pl-4">
           <p className="text-my-rose-300 text-sm">{data?.category}</p>
           <p className="text-sm text-black font-semibold">{data?.name}</p>
-          <p className="font-semibold text-my-red text-sm">
+          <p className="font-bold text-my-red text-sm">
             ${data?.price.toFixed(2)}
           </p>
         </div>
